@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+#import "SinaWeibo.h"
+@interface AppDelegate : UIResponder <UIApplicationDelegate,SinaWeiboDelegate,SinaWeiboRequestDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property (strong, nonatomic) SinaWeibo *sinaWeibo;
 
 @end
 

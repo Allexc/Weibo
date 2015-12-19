@@ -7,6 +7,12 @@
 //
 
 #import "AppDelegate.h"
+#import "MainTabBarController.h"
+#import "Common.h"
+#import "LeftViewController.h"
+#import "RightViewController.h"
+#import "MMDrawerController.h"
+#import "MMDrawerVisualState.h"
 
 @interface AppDelegate ()
 
@@ -16,10 +22,74 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    
+    LeftViewController *leftViewController = [[LeftViewController alloc]init];
+    RightViewController *rightViewController = [[RightViewController alloc]init];
+    MainTabBarController *centerViewController = [[MainTabBarController alloc]init];
+    
+    MMDrawerController *drawerController = [[MMDrawerController alloc]initWithCenterViewController:centerViewController leftDrawerViewController:leftViewController rightDrawerViewController:rightViewController];
+    
+    [drawerController setMaximumRightDrawerWidth:70.0];
+    [drawerController setMaximumLeftDrawerWidth:140.0];
+    [drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
+    [drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
+    
+    MMDrawerControllerDrawerVisualStateBlock block = [MMDrawerVisualState swingingDoorVisualStateBlock];
+    [drawerController setDrawerVisualStateBlock:block];
+    
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.rootViewController = drawerController;
+    
+    _sinaWeibo = [[SinaWeibo alloc] initWithAppKey:kAppKey appSecret:kAppSecret appRedirectURI:kAppRedirectURI andDelegate:self];
+    
+    [self.window makeKeyAndVisible];
+    
+    [self readAuthData];
     return YES;
 }
 
+
+
+
+
+- (void)readAuthData{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSDictionary *sinaweiboInfo = [defaults objectForKey:@"HCWeiboAuthData"];
+    if ([sinaweiboInfo objectForKey:@"AccessTokenKey"] && [sinaweiboInfo objectForKey:@"ExpirationDateKey"] && [sinaweiboInfo objectForKey:@"UserIDKey"])
+    {
+        self.sinaWeibo.accessToken = [sinaweiboInfo objectForKey:@"AccessTokenKey"];
+        self.sinaWeibo.expirationDate = [sinaweiboInfo objectForKey:@"ExpirationDateKey"];
+        self.sinaWeibo.userID = [sinaweiboInfo objectForKey:@"UserIDKey"];
+    }
+    
+}
+
+
+- (void)storeAuthData
+{
+    //存储到沙盒特定plist文件中。
+    SinaWeibo *sinaweibo = [self sinaWeibo];
+    
+    NSDictionary *authData = [NSDictionary dictionaryWithObjectsAndKeys:
+                              sinaweibo.accessToken, @"AccessTokenKey",
+                              sinaweibo.expirationDate, @"ExpirationDateKey",
+                              sinaweibo.userID, @"UserIDKey",
+                              sinaweibo.refreshToken, @"refresh_token", nil];
+    //把字典存储到userDefaults里面
+    [[NSUserDefaults standardUserDefaults] setObject:authData forKey:@"HCWeiboAuthData"];
+    
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+- (void)sinaweiboDidLogIn:(SinaWeibo *)sinaweibo {
+    NSLog(@"已经上线");
+    [self storeAuthData];
+}
+
+- (void)sinaweiboDidLogOut:(SinaWeibo *)sinaweibo {
+    NSLog(@"已经注销");
+}
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
