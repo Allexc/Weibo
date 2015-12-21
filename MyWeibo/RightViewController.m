@@ -37,9 +37,12 @@
 - (void)buttonAction:(UIButton *)button {
     switch (button.tag) {
         case 101:
+            self.modalPresentationStyle = UIModalPresentationPageSheet;
             [self presentViewController:_sendVC animated:YES completion:nil];
+            
             break;
         case 102:
+            
         
             break;
         case 103:

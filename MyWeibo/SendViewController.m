@@ -13,6 +13,8 @@
 @interface SendViewController ()
 {
     UITextView *_textView;
+    
+    UIImageView *_imageView;
 }
 @end
 
@@ -25,6 +27,7 @@
     [self createTopView];
     
     [self createtextView];
+    
     
     
     
@@ -73,8 +76,67 @@
     _textView.backgroundColor = [UIColor grayColor];
     [self becomeFirstResponder];
     [self.view addSubview:_textView];
+    
+    _imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 270, 100, 100)];
+    
+    [self.view addSubview:_imageView];
 }
 
+
+- (void)_selectPhoto {
+    
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    UIAlertAction *actionPhoto = [UIAlertAction actionWithTitle:@"相机" style: UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        NSLog(@"open camera");
+        [self _photoPicker:NO];
+    }];
+    
+    UIAlertAction *actionAcamera = [UIAlertAction actionWithTitle:@"相册" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self _photoPicker:YES];
+    }];
+    
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        
+    }];
+    
+    [alertController addAction:actionAcamera];
+    [alertController addAction:actionPhoto];
+    [alertController addAction:cancel];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
+}
+- (void)_photoPicker:(BOOL)isCamera {
+    
+    UIImagePickerControllerSourceType sourceType;
+    
+    if (isCamera) {
+        sourceType = UIImagePickerControllerSourceTypeCamera;
+        
+        BOOL isCameraAvailable = [UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerCameraDeviceRear];
+        if (! isCameraAvailable) {
+            NSLog(@"相机不可以");
+            return;
+        }
+    }else {
+        sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+    }
+    UIImagePickerController *picker = [[UIImagePickerController alloc]init];
+    picker.sourceType = sourceType;
+    
+    picker.delegate = self;
+    
+    [self presentViewController:picker animated:YES completion:nil];
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
+    
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    
+    UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

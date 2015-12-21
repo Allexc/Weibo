@@ -36,27 +36,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="toX-de-IJk">
-                                <rect key="frame" x="29" y="111" width="185" height="183.5"/>
+                                <rect key="frame" x="29" y="111" width="138" height="127.5"/>
                                 <animations/>
-                                <state key="normal" title="Button" image="附近微博.jpg"/>
+                                <state key="normal" title="Button" image="附近的人.jpg"/>
                                 <connections>
                                     <segue destination="fcz-Du-xCE" kind="show" id="Bdg-wV-WW8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nqf-Ss-swe">
-                                <rect key="frame" x="286" y="111" width="184" height="186"/>
+                                <rect key="frame" x="212" y="111" width="133" height="131"/>
                                 <animations/>
-                                <state key="normal" title="Button" image="附近的人.jpg"/>
+                                <state key="normal" title="Button" image="附近微博.jpg"/>
+                                <connections>
+                                    <segue destination="2GF-3D-Zrv" kind="show" id="pBT-bU-afF"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="附近的微博" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X70-sj-Dee">
-                                <rect key="frame" x="53" y="302" width="137" height="39"/>
+                                <rect key="frame" x="210" y="258" width="137" height="39"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="附近的人" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fen-GS-cnx">
-                                <rect key="frame" x="303" y="311" width="146" height="30"/>
+                                <rect key="frame" x="29" y="258" width="146" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -149,6 +152,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZTz-ZY-zeg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="242" y="168"/>
+        </scene>
+        <!--Nearby Weibo View Controller-->
+        <scene sceneID="QWC-Lt-3nx">
+            <objects>
+                <viewController id="2GF-3D-Zrv" customClass="NearbyWeiboViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="w3x-eE-1Wt"/>
+                        <viewControllerLayoutGuide type="bottom" id="Cy6-x5-FYM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NOJ-lz-Mut">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d72-L5-TrX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-439" y="-522"/>
         </scene>
     </scenes>
     <resources>

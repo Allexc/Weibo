@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SendViewController : UIViewController
+@interface SendViewController : UIViewController<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
 @end

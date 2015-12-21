@@ -412,6 +412,9 @@
 		9F3570991C1A6FB30029B0BF /* WeiboView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3570981C1A6FB30029B0BF /* WeiboView.m */; };
 		9F35709C1C1A9ECE0029B0BF /* WeiboFrameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F35709B1C1A9ECE0029B0BF /* WeiboFrameModel.m */; };
 		9F3570A21C1ABADC0029B0BF /* ImgAttchment.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3570A11C1ABADC0029B0BF /* ImgAttchment.m */; };
+		9F380C421C24EBE30091662E /* NearbyWeiboViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F380C411C24EBE30091662E /* NearbyWeiboViewController.m */; };
+		9F380C451C2502FF0091662E /* WeiboAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F380C441C2502FF0091662E /* WeiboAnnotation.m */; };
+		9F380C481C2537D50091662E /* WeiboAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F380C471C2537D50091662E /* WeiboAnnotationView.m */; };
 		9F88C6951C244B8A00F0F832 /* SendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F88C6931C244B8A00F0F832 /* SendViewController.m */; };
 		9F92FB4B1C15753600228E20 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F92FB411C15753600228E20 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9F92FB4C1C15753600228E20 /* SinaWeibo.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9F92FB431C15753600228E20 /* SinaWeibo.bundle */; };
@@ -452,6 +455,8 @@
 		9FBB87AD1C1ED61F007E6E73 /* WeiboDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FBB87AC1C1ED61F007E6E73 /* WeiboDetailCell.xib */; };
 		9FC34BFE1C17C42900E18DB4 /* ThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC34BFD1C17C42900E18DB4 /* ThemeManager.m */; };
 		9FC34C011C17C44E00E18DB4 /* ThemeImgView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC34C001C17C44E00E18DB4 /* ThemeImgView.m */; };
+		9FD0AFB71C27D96D0051FC36 /* FaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD0AFB61C27D96D0051FC36 /* FaceView.m */; };
+		9FD0AFBA1C27D9810051FC36 /* FacePanelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD0AFB91C27D9810051FC36 /* FacePanelView.m */; };
 		9FE6389E1C17F97F009C8CDD /* ThemeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FE6389D1C17F97F009C8CDD /* ThemeButton.m */; };
 		9FE638A11C183D50009C8CDD /* ThemeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FE638A01C183D50009C8CDD /* ThemeLabel.m */; };
 		9FF3BB701C1FF7E700715E06 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF3BB6F1C1FF7E700715E06 /* MBProgressHUD.m */; };
@@ -932,6 +937,12 @@
 		9F35709B1C1A9ECE0029B0BF /* WeiboFrameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboFrameModel.m; sourceTree = "<group>"; };
 		9F3570A01C1ABADC0029B0BF /* ImgAttchment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImgAttchment.h; sourceTree = "<group>"; };
 		9F3570A11C1ABADC0029B0BF /* ImgAttchment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImgAttchment.m; sourceTree = "<group>"; };
+		9F380C401C24EBE30091662E /* NearbyWeiboViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearbyWeiboViewController.h; sourceTree = "<group>"; };
+		9F380C411C24EBE30091662E /* NearbyWeiboViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearbyWeiboViewController.m; sourceTree = "<group>"; };
+		9F380C431C2502FF0091662E /* WeiboAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboAnnotation.h; sourceTree = "<group>"; };
+		9F380C441C2502FF0091662E /* WeiboAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboAnnotation.m; sourceTree = "<group>"; };
+		9F380C461C2537D50091662E /* WeiboAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboAnnotationView.h; sourceTree = "<group>"; };
+		9F380C471C2537D50091662E /* WeiboAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboAnnotationView.m; sourceTree = "<group>"; };
 		9F88C6921C244B8A00F0F832 /* SendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendViewController.h; sourceTree = "<group>"; };
 		9F88C6931C244B8A00F0F832 /* SendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendViewController.m; sourceTree = "<group>"; };
 		9F92FB401C15753600228E20 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
@@ -1012,6 +1023,10 @@
 		9FC34BFD1C17C42900E18DB4 /* ThemeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeManager.m; sourceTree = "<group>"; };
 		9FC34BFF1C17C44E00E18DB4 /* ThemeImgView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeImgView.h; sourceTree = "<group>"; };
 		9FC34C001C17C44E00E18DB4 /* ThemeImgView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeImgView.m; sourceTree = "<group>"; };
+		9FD0AFB51C27D96D0051FC36 /* FaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceView.h; sourceTree = "<group>"; };
+		9FD0AFB61C27D96D0051FC36 /* FaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceView.m; sourceTree = "<group>"; };
+		9FD0AFB81C27D9810051FC36 /* FacePanelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacePanelView.h; sourceTree = "<group>"; };
+		9FD0AFB91C27D9810051FC36 /* FacePanelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacePanelView.m; sourceTree = "<group>"; };
 		9FE6389C1C17F97F009C8CDD /* ThemeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeButton.h; sourceTree = "<group>"; };
 		9FE6389D1C17F97F009C8CDD /* ThemeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeButton.m; sourceTree = "<group>"; };
 		9FE6389F1C183D50009C8CDD /* ThemeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeLabel.h; sourceTree = "<group>"; };
@@ -1183,6 +1198,8 @@
 				9F346E721C152E7E0056BC6E /* DiscoverViewController.m */,
 				9F9B9ACC1C23E323008A3675 /* NearbyPlaceController.h */,
 				9F9B9ACD1C23E323008A3675 /* NearbyPlaceController.m */,
+				9F380C401C24EBE30091662E /* NearbyWeiboViewController.h */,
+				9F380C411C24EBE30091662E /* NearbyWeiboViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1192,6 +1209,8 @@
 			children = (
 				9F9B9B061C241D99008A3675 /* PoiModel.h */,
 				9F9B9B071C241D99008A3675 /* PoiModel.m */,
+				9F380C431C2502FF0091662E /* WeiboAnnotation.h */,
+				9F380C441C2502FF0091662E /* WeiboAnnotation.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1202,6 +1221,8 @@
 				9F346E841C1530740056BC6E /* Discover.Storyboard */,
 				9F9B9B091C24255B008A3675 /* PoiCell.h */,
 				9F9B9B0A1C24255B008A3675 /* PoiCell.m */,
+				9F380C461C2537D50091662E /* WeiboAnnotationView.h */,
+				9F380C471C2537D50091662E /* WeiboAnnotationView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1296,6 +1317,10 @@
 			isa = PBXGroup;
 			children = (
 				9F346E881C1530900056BC6E /* Message.Storyboard */,
+				9FD0AFB51C27D96D0051FC36 /* FaceView.h */,
+				9FD0AFB61C27D96D0051FC36 /* FaceView.m */,
+				9FD0AFB81C27D9810051FC36 /* FacePanelView.h */,
+				9FD0AFB91C27D9810051FC36 /* FacePanelView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2436,6 +2461,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F380C481C2537D50091662E /* WeiboAnnotationView.m in Sources */,
 				9F3570941C1A5F2B0029B0BF /* UIImageView+HighlightedWebCache.m in Sources */,
 				9F346E731C152E7E0056BC6E /* DiscoverViewController.m in Sources */,
 				9F346E7F1C152EF20056BC6E /* ProfileViewController.m in Sources */,
@@ -2447,6 +2473,7 @@
 				9FBB879D1C1E7F7A007E6E73 /* UIView+UIViewController.m in Sources */,
 				9FF3BB701C1FF7E700715E06 /* MBProgressHUD.m in Sources */,
 				9F1D1A081C19239D009A72D3 /* UIViewController+MMDrawerController.m in Sources */,
+				9FD0AFBA1C27D9810051FC36 /* FacePanelView.m in Sources */,
 				9FBB87AB1C1ED5FF007E6E73 /* WeiboDetailCell.m in Sources */,
 				9F3570991C1A6FB30029B0BF /* WeiboView.m in Sources */,
 				9F9B9ADD1C23EC0C008A3675 /* AFHTTPSessionManager.m in Sources */,
@@ -2468,10 +2495,12 @@
 				9FC34BFE1C17C42900E18DB4 /* ThemeManager.m in Sources */,
 				9F93EFD41C1BF039000E485C /* RegexKitLite.m in Sources */,
 				9F35709C1C1A9ECE0029B0BF /* WeiboFrameModel.m in Sources */,
+				9FD0AFB71C27D96D0051FC36 /* FaceView.m in Sources */,
 				9F1D1A211C19927C009A72D3 /* WeiboTableViewCell.m in Sources */,
 				9F35708A1C1A5F2B0029B0BF /* SDWebImageCompat.m in Sources */,
 				9F9B9ACE1C23E323008A3675 /* NearbyPlaceController.m in Sources */,
 				9F0C948A1C21370000995180 /* ZoomImgView.m in Sources */,
+				9F380C421C24EBE30091662E /* NearbyWeiboViewController.m in Sources */,
 				9F35708C1C1A5F2B0029B0BF /* SDWebImageDownloader.m in Sources */,
 				9F9B9B001C23EC1E008A3675 /* UIProgressView+AFNetworking.m in Sources */,
 				9F35708D1C1A5F2B0029B0BF /* SDWebImageDownloaderOperation.m in Sources */,
@@ -2505,6 +2534,7 @@
 				9F3570931C1A5F2B0029B0BF /* UIImage+WebP.m in Sources */,
 				9F93EFDF1C1C14A2000E485C /* WXLabel.m in Sources */,
 				9F92FB4E1C15753600228E20 /* SinaWeiboAuthorizeView.m in Sources */,
+				9F380C451C2502FF0091662E /* WeiboAnnotation.m in Sources */,
 				9FE6389E1C17F97F009C8CDD /* ThemeButton.m in Sources */,
 				9F9B9B021C23EC1E008A3675 /* UIWebView+AFNetworking.m in Sources */,
 				9F346E901C1530E70056BC6E /* BaseNavgationController.m in Sources */,

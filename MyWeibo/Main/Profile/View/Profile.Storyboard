@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Base Navgation Controller-->
@@ -33,8 +34,48 @@
                     <view key="view" contentMode="scaleToFill" id="PDp-Px-b8k">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WIN-XE-9Gf">
+                                <rect key="frame" x="150" y="472" width="150" height="128"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pa5-Ya-HZT">
+                                <rect key="frame" x="300" y="472" width="150" height="128"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xip-rz-OAJ">
+                                <rect key="frame" x="450" y="472" width="150" height="128"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jua-kN-X3v">
+                                <rect key="frame" x="0.0" y="472" width="150" height="128"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pa5-Ya-HZT" firstAttribute="width" secondItem="Jua-kN-X3v" secondAttribute="width" id="96L-JO-51c"/>
+                            <constraint firstItem="xip-rz-OAJ" firstAttribute="height" secondItem="Jua-kN-X3v" secondAttribute="height" id="DUk-cu-ifK"/>
+                            <constraint firstItem="pa5-Ya-HZT" firstAttribute="height" secondItem="Jua-kN-X3v" secondAttribute="height" id="DpH-fp-gEw"/>
+                            <constraint firstItem="Jua-kN-X3v" firstAttribute="top" secondItem="w47-tM-nRW" secondAttribute="bottom" constant="408" id="Fpq-Qc-65w"/>
+                            <constraint firstItem="Jua-kN-X3v" firstAttribute="leading" secondItem="PDp-Px-b8k" secondAttribute="leadingMargin" constant="-20" id="G0u-AE-trn"/>
+                            <constraint firstItem="Qau-EJ-ji3" firstAttribute="top" secondItem="Jua-kN-X3v" secondAttribute="bottom" id="LLW-1S-PWr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xip-rz-OAJ" secondAttribute="trailing" constant="-20" id="Mpo-xQ-vIz"/>
+                            <constraint firstItem="xip-rz-OAJ" firstAttribute="width" secondItem="Jua-kN-X3v" secondAttribute="width" id="RmI-oe-hGy"/>
+                            <constraint firstItem="Qau-EJ-ji3" firstAttribute="top" secondItem="pa5-Ya-HZT" secondAttribute="bottom" id="VAj-r4-fqA"/>
+                            <constraint firstItem="pa5-Ya-HZT" firstAttribute="leading" secondItem="WIN-XE-9Gf" secondAttribute="trailing" id="VvJ-bh-hXl"/>
+                            <constraint firstItem="xip-rz-OAJ" firstAttribute="leading" secondItem="pa5-Ya-HZT" secondAttribute="trailing" id="jhX-rL-2Xr"/>
+                            <constraint firstItem="Qau-EJ-ji3" firstAttribute="top" secondItem="xip-rz-OAJ" secondAttribute="bottom" id="mS2-BG-JYp"/>
+                            <constraint firstItem="WIN-XE-9Gf" firstAttribute="width" secondItem="Jua-kN-X3v" secondAttribute="width" id="n7V-eB-I2l"/>
+                            <constraint firstItem="Qau-EJ-ji3" firstAttribute="top" secondItem="WIN-XE-9Gf" secondAttribute="bottom" id="nN2-kV-45H"/>
+                            <constraint firstItem="WIN-XE-9Gf" firstAttribute="height" secondItem="Jua-kN-X3v" secondAttribute="height" id="qoG-KF-zbH"/>
+                            <constraint firstItem="WIN-XE-9Gf" firstAttribute="leading" secondItem="Jua-kN-X3v" secondAttribute="trailing" id="tXj-dT-Ed9"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="JOt-or-9iM"/>
                 </viewController>
