@@ -8,7 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FaceView : UIView
+@protocol FaceViewDelegate <NSObject>
 
-@property (nonatomic, readonly) NSInteger *pageNumer;
+- (void)selectFaceName:(NSString *)faceName;
+
+@end
+@interface FaceView : UIView
+@property (nonatomic, readonly)NSInteger pageNumber;
+@property (nonatomic, weak)id<FaceViewDelegate> delegate;
+
 @end

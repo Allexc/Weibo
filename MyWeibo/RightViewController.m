@@ -10,9 +10,11 @@
 #import "Common.h"
 #import "ThemeButton.h"
 #import "SendViewController.h"
+#import "BaseNavgationController.h"
 @interface RightViewController ()
 {
     SendViewController *_sendVC;
+    BaseNavgationController *baseNav;
 }
 @end
 
@@ -22,7 +24,11 @@
     [super viewDidLoad];
   
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    
      _sendVC = [[SendViewController alloc]init];
+    _sendVC.title = @"发送微博";
+    baseNav = [[BaseNavgationController alloc]initWithRootViewController:_sendVC];
     for (int i = 1; i < 6; i++) {
         ThemeButton *button = [[ThemeButton alloc]initWithFrame:CGRectMake(15, 64+(i-1)*50, 40, 40)];
         button.normalimg = [NSString stringWithFormat:@"newbar_icon_%i",i];
@@ -34,11 +40,12 @@
    
 }
 
+
 - (void)buttonAction:(UIButton *)button {
     switch (button.tag) {
         case 101:
-            self.modalPresentationStyle = UIModalPresentationPageSheet;
-            [self presentViewController:_sendVC animated:YES completion:nil];
+            
+            [self presentViewController:baseNav animated:YES completion:nil];
             
             break;
         case 102:

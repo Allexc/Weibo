@@ -42,6 +42,9 @@
 
 - (void)zoomAction {
     
+    if ([self.delegate respondsToSelector:@selector(viewWillZoomIn:)]) {
+        [self.delegate viewWillZoomIn:self];
+    }
     [self creatView];
     CGRect fram = [self convertRect:self.bounds toView:self.window];
     _imgView.frame = fram;
@@ -100,27 +103,41 @@
     
     if (press.state ==UIGestureRecognizerStateBegan) {
         NSLog(@"press");
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"是否保存图片" preferredStyle:UIAlertControllerStyleAlert
-                                    ];
-    
-        UIAlertAction *action = [UIAlertAction actionWithTitle:@"是" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            
-            UIImage *image = _imgView.image;
-            UIImageWriteToSavedPhotosAlbum(image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
-            
-        }];
-        [alert addAction:action];
         
-        UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"否" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-            
-        }];
-        [alert addAction:cancel];
+        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"提示" message:@"是否保存图片" delegate:self cancelButtonTitle:@"否" otherButtonTitles:@"是", nil];
         
-         UIViewController *vc = self.viewController;
-        [vc presentViewController:alert animated:YES completion:nil];
+        [alertView show];
+//        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"是否保存图片" preferredStyle:UIAlertControllerStyleAlert
+//                                    ];
+//    
+//        UIAlertAction *action = [UIAlertAction actionWithTitle:@"是" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+//            
+//            UIImage *image = _imgView.image;
+//            UIImageWriteToSavedPhotosAlbum(image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+//            
+//        }];
+//        [alert addAction:action];
+//        
+//        UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"否" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+//            
+//        }];
+//        [alert addAction:cancel];
+//        
+//         UIViewController *vc = self.viewController;
+//        [vc presentViewController:alert animated:YES completion:nil];
                                  };
     
     
+}
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
+    if (buttonIndex == 1) {
+     
+        UIImage *image = _imgView.image;
+        UIImageWriteToSavedPhotosAlbum(image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+    }
+    
+
 }
 
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
@@ -142,6 +159,9 @@
 
 - (void)scrollAction {
     
+    if ([self.delegate respondsToSelector:@selector(viewWillZoomOut:)]) {
+        [self.delegate viewWillZoomOut:self];
+    }
     _scrollView.backgroundColor = [UIColor clearColor];
     
     [UIView animateWithDuration:0.2 animations:^{
@@ -156,20 +176,20 @@
     }];
 }
 
-- (void)_loadFullImage {
-    
-    if (_fullImageUrl != nil) {
-        
-        _hud = [MBProgressHUD showHUDAddedTo:_scrollView animated:YES];
-        _hud.mode = MBProgressHUDModeDeterminate;
-        _hud.progress = 0.0;
-        NSURL *url = [NSURL URLWithString:_fullImageUrl];
-        NSURLRequest *request = [NSURLRequest requestWithURL:url];
-        _connection = [NSURLConnection connectionWithRequest:request delegate:self];
-
-    }
-    
-}
+//- (void)_loadFullImage {
+//    
+//    if (_fullImageUrl != nil) {
+//        
+//        _hud = [MBProgressHUD showHUDAddedTo:_scrollView animated:YES];
+//        _hud.mode = MBProgressHUDModeDeterminate;
+//        _hud.progress = 0.0;
+//        NSURL *url = [NSURL URLWithString:_fullImageUrl];
+//        NSURLRequest *request = [NSURLRequest requestWithURL:url];
+//        _connection = [NSURLConnection connectionWithRequest:request delegate:self];
+//
+//    }
+//    
+//}
 
 - (void)_loadImage {
     

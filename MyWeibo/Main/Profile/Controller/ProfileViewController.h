@@ -7,7 +7,9 @@
 //
 
 #import "BaseViewController.h"
+#import "SinaWeiboRequest.h"
+@interface ProfileViewController : BaseViewController<UITableViewDataSource,UITableViewDelegate,SinaWeiboRequestDelegate>
 
-@interface ProfileViewController : BaseViewController
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end

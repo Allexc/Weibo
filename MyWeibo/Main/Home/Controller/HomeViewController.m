@@ -45,7 +45,7 @@
     
     __weak HomeViewController *home = self;
     [_tableView addPullDownRefreshBlock:^{
-        NSLog(@"shuaxin");
+       
         [home loadNewData];
     }];
     
@@ -178,7 +178,7 @@
 //}
 //NSMutableDictionary dictionaryWithObject:sinaweibo.userID forKey:@"uid"]
 - (void)request:(SinaWeiboRequest *)request didFinishLoadingWithResult:(id)result {
-    //NSLog(@"%@",result);
+    
     [self hide];
     [_tableView.pullToRefreshView stopAnimating];
     [_tableView.infiniteScrollingView stopAnimating];
@@ -191,7 +191,6 @@
         frameModel.weiboModel = [[WeiboModel alloc]initWithDataDic:dic];
         [modelArray addObject:frameModel];
         
-       
     }
     if (modelArray.count == 0) {
         return;

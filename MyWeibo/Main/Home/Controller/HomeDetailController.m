@@ -26,7 +26,7 @@
     [super viewDidLoad];
      self.view.backgroundColor = [UIColor colorWithPatternImage:[[ThemeManager shareInstance]getThemeImage:@"bg_home.jpg"]];
     _weiboDetailTableView = [[WeiboDetailTableView alloc]initWithFrame:self.view.bounds];
-    self.tabBarController.tabBar.hidden = YES;
+    //self.tabBarController.tabBar.hidden = YES;
     
     
     _weiboDetailTableView.backgroundColor =[UIColor clearColor];
@@ -48,6 +48,8 @@
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(themeChange) name:kNotification object:nil];
+        self.hidesBottomBarWhenPushed = YES;
+        self.title = @"微博详情";
     }
     return self;
 }
@@ -56,7 +58,8 @@
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(themeChange) name:kNotification object:nil];
-       
+       self.hidesBottomBarWhenPushed = YES;
+         self.title = @"微博详情";
     }
     return self;
 }

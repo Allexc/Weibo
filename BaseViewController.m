@@ -22,6 +22,10 @@
 
 @implementation BaseViewController
 
+- (void)dealloc {
+    
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
+}
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(themeChange) name:kNotification object:nil];
@@ -60,9 +64,13 @@
 //    self.view.backgroundColor = [UIColor orangeColor];
     self.view.backgroundColor = [UIColor colorWithPatternImage:[[ThemeManager shareInstance]getThemeImage:@"bg_home.jpg"]];
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"设置" style:UIBarButtonItemStylePlain target:self action:@selector(leftAction)];
+    if (self.navigationController.viewControllers.count == 1) {
+        
+        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"设置" style:UIBarButtonItemStylePlain target:self action:@selector(leftAction)];
+        
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"编辑" style:UIBarButtonItemStylePlain target:self action:@selector(rightAction)];
+    }
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"编辑" style:UIBarButtonItemStylePlain target:self action:@selector(rightAction)];
     // Do any additional setup after loading the view.
 }
 

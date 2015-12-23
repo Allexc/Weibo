@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "FaceView.h"
 @interface FacePanelView : UIView<UIScrollViewDelegate>
 
+@property(nonatomic,copy)NSString *FaceName;
+
+- (void)setFaceDelegate:(id<FaceViewDelegate>)delegate;
 @end

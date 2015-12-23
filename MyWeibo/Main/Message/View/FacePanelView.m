@@ -24,12 +24,16 @@
     return self;
 }
 
-
+- (void)setFaceDelegate:(id<FaceViewDelegate>)delegate {
+    _faceView.delegate = delegate;
+}
 
 - (void)creatView {
     
     _faceView = [[FaceView alloc]initWithFrame:CGRectZero];
     _faceView.backgroundColor = [UIColor clearColor];
+    
+    [_scrollView addSubview:_faceView];
     
     _scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, _faceView.height)];
     _scrollView.showsHorizontalScrollIndicator = NO;
@@ -45,16 +49,16 @@
     
     
     _pageContrl = [[UIPageControl alloc]initWithFrame:CGRectMake(0, _scrollView.bottom, kScreenWidth, 20)];
-    _pageContrl.numberOfPages = 4;
-    _pageContrl.currentPage = 0;
+    _pageContrl.numberOfPages = _faceView.pageNumber;
     
+    _pageContrl.autoresizingMask = UIViewAutoresizingNone;
     [self addSubview:_pageContrl];
     
     self.width = kScreenWidth;
     self.height = _pageContrl.height + _scrollView.height;
     
 }
-- (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView {
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     
     _pageContrl.currentPage = scrollView.contentOffset.x/kScreenWidth;
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F0353A01C296D0C0051293D /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F03539F1C296D0C0051293D /* HeaderView.m */; };
+		9F0353A21C296D1E0051293D /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F0353A11C296D1E0051293D /* HeaderView.xib */; };
 		9F0A25C51C22A20100635E8D /* 37x-Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F0A25C31C22A20100635E8D /* 37x-Checkmark.png */; };
 		9F0A25C61C22A20100635E8D /* 37x-Checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F0A25C41C22A20100635E8D /* 37x-Checkmark@2x.png */; };
 		9F0C948A1C21370000995180 /* ZoomImgView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F0C94891C21370000995180 /* ZoomImgView.m */; };
@@ -415,6 +417,7 @@
 		9F380C421C24EBE30091662E /* NearbyWeiboViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F380C411C24EBE30091662E /* NearbyWeiboViewController.m */; };
 		9F380C451C2502FF0091662E /* WeiboAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F380C441C2502FF0091662E /* WeiboAnnotation.m */; };
 		9F380C481C2537D50091662E /* WeiboAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F380C471C2537D50091662E /* WeiboAnnotationView.m */; };
+		9F8814811C2988D000C307AC /* ProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8814801C2988D000C307AC /* ProfileCell.m */; };
 		9F88C6951C244B8A00F0F832 /* SendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F88C6931C244B8A00F0F832 /* SendViewController.m */; };
 		9F92FB4B1C15753600228E20 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F92FB411C15753600228E20 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9F92FB4C1C15753600228E20 /* SinaWeibo.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9F92FB431C15753600228E20 /* SinaWeibo.bundle */; };
@@ -481,6 +484,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F03539E1C296D0C0051293D /* HeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HeaderView.h; path = MyWeibo/Main/Profile/View/HeaderView.h; sourceTree = SOURCE_ROOT; };
+		9F03539F1C296D0C0051293D /* HeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HeaderView.m; path = MyWeibo/Main/Profile/View/HeaderView.m; sourceTree = SOURCE_ROOT; };
+		9F0353A11C296D1E0051293D /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		9F0A25C31C22A20100635E8D /* 37x-Checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "37x-Checkmark.png"; sourceTree = "<group>"; };
 		9F0A25C41C22A20100635E8D /* 37x-Checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "37x-Checkmark@2x.png"; sourceTree = "<group>"; };
 		9F0C94881C21370000995180 /* ZoomImgView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoomImgView.h; sourceTree = "<group>"; };
@@ -943,6 +949,8 @@
 		9F380C441C2502FF0091662E /* WeiboAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboAnnotation.m; sourceTree = "<group>"; };
 		9F380C461C2537D50091662E /* WeiboAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboAnnotationView.h; sourceTree = "<group>"; };
 		9F380C471C2537D50091662E /* WeiboAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboAnnotationView.m; sourceTree = "<group>"; };
+		9F88147F1C2988D000C307AC /* ProfileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileCell.h; path = MyWeibo/Main/Profile/View/ProfileCell.h; sourceTree = SOURCE_ROOT; };
+		9F8814801C2988D000C307AC /* ProfileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileCell.m; path = MyWeibo/Main/Profile/View/ProfileCell.m; sourceTree = SOURCE_ROOT; };
 		9F88C6921C244B8A00F0F832 /* SendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendViewController.h; sourceTree = "<group>"; };
 		9F88C6931C244B8A00F0F832 /* SendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendViewController.m; sourceTree = "<group>"; };
 		9F92FB401C15753600228E20 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
@@ -1356,6 +1364,11 @@
 			isa = PBXGroup;
 			children = (
 				9F346E8C1C1530BE0056BC6E /* Profile.Storyboard */,
+				9F03539E1C296D0C0051293D /* HeaderView.h */,
+				9F03539F1C296D0C0051293D /* HeaderView.m */,
+				9F0353A11C296D1E0051293D /* HeaderView.xib */,
+				9F88147F1C2988D000C307AC /* ProfileCell.h */,
+				9F8814801C2988D000C307AC /* ProfileCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2144,6 +2157,7 @@
 				9F3494011C1553740056BC6E /* emoticon_keyboard_magnifier.png in Resources */,
 				9F34933F1C1553740056BC6E /* 041.gif in Resources */,
 				9F3493411C1553740056BC6E /* 041@2x.png in Resources */,
+				9F0353A21C296D1E0051293D /* HeaderView.xib in Resources */,
 				9F3493AD1C1553740056BC6E /* 077@2x.png in Resources */,
 				9F3493201C1553740056BC6E /* 030@2x.png in Resources */,
 				9F34937B1C1553740056BC6E /* 061.gif in Resources */,
@@ -2480,10 +2494,12 @@
 				9FE638A11C183D50009C8CDD /* ThemeLabel.m in Sources */,
 				9F3570951C1A5F2B0029B0BF /* UIImageView+WebCache.m in Sources */,
 				9F1D1A0E1C192413009A72D3 /* RightViewController.m in Sources */,
+				9F8814811C2988D000C307AC /* ProfileCell.m in Sources */,
 				9F9B9ADF1C23EC0C008A3675 /* AFSecurityPolicy.m in Sources */,
 				9F346E2C1C152D7A0056BC6E /* ViewController.m in Sources */,
 				9F3570901C1A5F2B0029B0BF /* UIButton+WebCache.m in Sources */,
 				9F92FB4F1C15753600228E20 /* SinaWeiboRequest.m in Sources */,
+				9F0353A01C296D0C0051293D /* HeaderView.m in Sources */,
 				9F9B9B011C23EC1E008A3675 /* UIRefreshControl+AFNetworking.m in Sources */,
 				9F92FB4D1C15753600228E20 /* SinaWeibo.m in Sources */,
 				9F1D1A141C195D71009A72D3 /* WeiboModel.m in Sources */,

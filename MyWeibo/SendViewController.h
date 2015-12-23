@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface SendViewController : UIViewController<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
+#import "BaseViewController.h"
+#import "ZoomImgView.h"
+#import "FaceView.h"
+#import "FacePanelView.h"
+@interface SendViewController : BaseViewController<UIImagePickerControllerDelegate,UINavigationControllerDelegate,ZoomImgViewDelegate,FaceViewDelegate>
 
 @end

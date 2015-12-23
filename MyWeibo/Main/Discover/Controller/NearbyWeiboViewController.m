@@ -21,7 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.title = @"附近的微博";
     [self _creatMaoView];
 }
 
@@ -57,7 +57,7 @@
             continue;
         }
         annotationView.transform = CGAffineTransformMakeScale(0.5, 0.5);
-        annotationView.alpha = 0.5;
+        annotationView.alpha = 0;
         
         [UIView animateWithDuration:1 animations:^{
             [UIView setAnimationDelay:i*0.1];
@@ -109,7 +109,7 @@
     NSString *latitudeStr = [NSString stringWithFormat:@"%lf",coordinate.latitude];
     [self _loadNearbyWeiboWithLong:longitudeStr lat:latitudeStr];
     
-    MKCoordinateSpan  span = {0.5,0.5};
+    MKCoordinateSpan  span = {0.1,0.1};
     CLLocationCoordinate2D center = coordinate;
     MKCoordinateRegion region = {center,span};//中心坐标，参数
     //设置地图显示区域

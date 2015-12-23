@@ -10,6 +10,15 @@
 #import "MBProgressHUD.h"
 #import "Common.h"
 #import "UIImage+GIF.h"
+@class ZoomImgView;
+@protocol ZoomImgViewDelegate <NSObject>
+
+- (void)viewWillZoomIn:(ZoomImgView *)view;
+- (void)viewWillZoomOut:(ZoomImgView *)view;
+
+
+@end
+
 @interface ZoomImgView : UIImageView<UIScrollViewDelegate,NSURLSessionDataDelegate>
 {
     NSURLConnection *_connection;
@@ -19,6 +28,7 @@
 }
 
 @property (nonatomic, copy)NSString *fullImageUrl;
-@property (nonatomic,strong) UIImageView *gifIconView;
+@property (nonatomic,strong)UIImageView *gifIconView;
+@property (nonatomic, weak)id<ZoomImgViewDelegate> delegate;
 
 @end
