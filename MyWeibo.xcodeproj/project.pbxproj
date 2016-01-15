@@ -417,6 +417,9 @@
 		9F380C421C24EBE30091662E /* NearbyWeiboViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F380C411C24EBE30091662E /* NearbyWeiboViewController.m */; };
 		9F380C451C2502FF0091662E /* WeiboAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F380C441C2502FF0091662E /* WeiboAnnotation.m */; };
 		9F380C481C2537D50091662E /* WeiboAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F380C471C2537D50091662E /* WeiboAnnotationView.m */; };
+		9F5D7A851C2AC37A00575345 /* FriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5D7A841C2AC37A00575345 /* FriendViewController.m */; };
+		9F5D7A881C2AC56100575345 /* FriendCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5D7A871C2AC56100575345 /* FriendCollectionView.m */; };
+		9F5D7A8B1C2ACCDB00575345 /* FriendCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5D7A8A1C2ACCDB00575345 /* FriendCollectionViewCell.m */; };
 		9F8814811C2988D000C307AC /* ProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8814801C2988D000C307AC /* ProfileCell.m */; };
 		9F88C6951C244B8A00F0F832 /* SendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F88C6931C244B8A00F0F832 /* SendViewController.m */; };
 		9F92FB4B1C15753600228E20 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F92FB411C15753600228E20 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -949,6 +952,12 @@
 		9F380C441C2502FF0091662E /* WeiboAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboAnnotation.m; sourceTree = "<group>"; };
 		9F380C461C2537D50091662E /* WeiboAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboAnnotationView.h; sourceTree = "<group>"; };
 		9F380C471C2537D50091662E /* WeiboAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboAnnotationView.m; sourceTree = "<group>"; };
+		9F5D7A831C2AC37A00575345 /* FriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FriendViewController.h; path = MyWeibo/Main/Profile/Controller/FriendViewController.h; sourceTree = SOURCE_ROOT; };
+		9F5D7A841C2AC37A00575345 /* FriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FriendViewController.m; path = MyWeibo/Main/Profile/Controller/FriendViewController.m; sourceTree = SOURCE_ROOT; };
+		9F5D7A861C2AC56100575345 /* FriendCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FriendCollectionView.h; path = MyWeibo/Main/Profile/View/FriendCollectionView.h; sourceTree = SOURCE_ROOT; };
+		9F5D7A871C2AC56100575345 /* FriendCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FriendCollectionView.m; path = MyWeibo/Main/Profile/View/FriendCollectionView.m; sourceTree = SOURCE_ROOT; };
+		9F5D7A891C2ACCDB00575345 /* FriendCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FriendCollectionViewCell.h; path = MyWeibo/Main/Profile/View/FriendCollectionViewCell.h; sourceTree = SOURCE_ROOT; };
+		9F5D7A8A1C2ACCDB00575345 /* FriendCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FriendCollectionViewCell.m; path = MyWeibo/Main/Profile/View/FriendCollectionViewCell.m; sourceTree = SOURCE_ROOT; };
 		9F88147F1C2988D000C307AC /* ProfileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileCell.h; path = MyWeibo/Main/Profile/View/ProfileCell.h; sourceTree = SOURCE_ROOT; };
 		9F8814801C2988D000C307AC /* ProfileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileCell.m; path = MyWeibo/Main/Profile/View/ProfileCell.m; sourceTree = SOURCE_ROOT; };
 		9F88C6921C244B8A00F0F832 /* SendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendViewController.h; sourceTree = "<group>"; };
@@ -1349,6 +1358,8 @@
 			children = (
 				9F346E7D1C152EF20056BC6E /* ProfileViewController.h */,
 				9F346E7E1C152EF20056BC6E /* ProfileViewController.m */,
+				9F5D7A831C2AC37A00575345 /* FriendViewController.h */,
+				9F5D7A841C2AC37A00575345 /* FriendViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1369,6 +1380,10 @@
 				9F0353A11C296D1E0051293D /* HeaderView.xib */,
 				9F88147F1C2988D000C307AC /* ProfileCell.h */,
 				9F8814801C2988D000C307AC /* ProfileCell.m */,
+				9F5D7A861C2AC56100575345 /* FriendCollectionView.h */,
+				9F5D7A871C2AC56100575345 /* FriendCollectionView.m */,
+				9F5D7A891C2ACCDB00575345 /* FriendCollectionViewCell.h */,
+				9F5D7A8A1C2ACCDB00575345 /* FriendCollectionViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2483,6 +2498,7 @@
 				9FBB87A81C1ED3E3007E6E73 /* WeiboDetailTableView.m in Sources */,
 				9F88C6951C244B8A00F0F832 /* SendViewController.m in Sources */,
 				9F93EFD81C1BF11B000E485C /* UIViewExt.m in Sources */,
+				9F5D7A881C2AC56100575345 /* FriendCollectionView.m in Sources */,
 				9FBB87A51C1E97DC007E6E73 /* UIScrollView+PullUpRefresh.m in Sources */,
 				9FBB879D1C1E7F7A007E6E73 /* UIView+UIViewController.m in Sources */,
 				9FF3BB701C1FF7E700715E06 /* MBProgressHUD.m in Sources */,
@@ -2514,6 +2530,7 @@
 				9FD0AFB71C27D96D0051FC36 /* FaceView.m in Sources */,
 				9F1D1A211C19927C009A72D3 /* WeiboTableViewCell.m in Sources */,
 				9F35708A1C1A5F2B0029B0BF /* SDWebImageCompat.m in Sources */,
+				9F5D7A851C2AC37A00575345 /* FriendViewController.m in Sources */,
 				9F9B9ACE1C23E323008A3675 /* NearbyPlaceController.m in Sources */,
 				9F0C948A1C21370000995180 /* ZoomImgView.m in Sources */,
 				9F380C421C24EBE30091662E /* NearbyWeiboViewController.m in Sources */,
@@ -2563,6 +2580,7 @@
 				9FBB879A1C1E4BBC007E6E73 /* HomeDetailController.m in Sources */,
 				9F3570891C1A5F2B0029B0BF /* SDImageCache.m in Sources */,
 				9F9B9AFA1C23EC1E008A3675 /* AFAutoPurgingImageCache.m in Sources */,
+				9F5D7A8B1C2ACCDB00575345 /* FriendCollectionViewCell.m in Sources */,
 				9F9B9ADE1C23EC0C008A3675 /* AFNetworkReachabilityManager.m in Sources */,
 				9FF3BB731C2030C500715E06 /* CommentModel.m in Sources */,
 			);

@@ -37,6 +37,7 @@
 #define nearby_timeline  @"place/nearby_timeline.json" //附近动态
 
 #define user_show @"users/show.json"//用户信息
+#define user_timeline @"statuses/user_timeline.json"//用户发的微博
 #define ios7 ([[UIDevice currentDevice].systemVersion floatValue] >= 7.0)
 #define ios8 ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0)
 
